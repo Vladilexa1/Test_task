@@ -15,9 +15,14 @@ def make_photo(pcam2: Picamera2):
 def save_photo(img, name=""):
     if name == "":
         name = datetime.now().strftime("%H%M%S%d%m%Y")
-    cv2.imwrite(f"./PhotoMaker/{name}.jpg", img)
+    success = cv2.imwrite(f"./PhotoMaker/{name}.jpg", img)
+    if success:
+        print("The photo is saved")
+    else:
+        print("Something went wrong")
 
 
 if __name__ == "__main__":
     picam2 = Picamera2()
     img = make_photo(picam2)
+    save_photo(img)
