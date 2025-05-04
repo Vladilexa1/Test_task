@@ -14,4 +14,4 @@ chmod 777 script.sh
 4. open the script with the editor, paste the script from the repository, save and run.
 5. Run the program
 ```bash
-python ./Test_task/PthotoMaker.py
+python ./Test_task/main.py
