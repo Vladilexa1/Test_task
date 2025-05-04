@@ -21,8 +21,11 @@ def save_photo(img, name=""):
     else:
         print("Something went wrong")
 
-
-if __name__ == "__main__":
+def main():
     picam2 = Picamera2()
     img = make_photo(picam2)
     save_photo(img)
+
+
+if __name__ == "__main__":
+    main()
