@@ -1,5 +1,5 @@
 #!/bin/bash
-grep -qxF 'gpu_mem=128' /boot/firmware/config.txt || echo 'gpu mem=128' | sudo tee -a /boot/firmware/config.txt
+grep -qxF 'gpu mem=128' /boot/firmware/config.txt || echo 'gpu mem=128' | sudo tee -a /boot/firmware/config.txt
 grep -qxF 'dtoverlay=imx219' /boot/firmware/config.txt || echo 'dtoverlay=imx219' | sudo tee -a /boot/firmware/config.txt
 sudo apt install python3-opencv -y
 sudo apt install python3-picamera2 -y
